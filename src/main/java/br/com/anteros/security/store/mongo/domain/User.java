@@ -99,6 +99,9 @@ public class User extends Security implements IUser {
 
 	@Property(value = "administrator", required = true, defaultValue = "false")
 	private Boolean boAdministrator;
+	
+	@Property(value="avatar")
+	private String avatar;
 
 	/*
 	 * Horário de acesso do usuário
@@ -281,6 +284,14 @@ public class User extends Security implements IUser {
 	@Override
 	public IProfile getUserProfile() {
 		return (IProfile) profile;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
 	}
 
 
