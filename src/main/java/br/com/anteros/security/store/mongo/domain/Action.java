@@ -228,4 +228,10 @@ public class Action implements Serializable, IAction {
 		return new Action(actionName,description,category,resource,version);
 	}
 
+	@Override
+	public String getActionId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
