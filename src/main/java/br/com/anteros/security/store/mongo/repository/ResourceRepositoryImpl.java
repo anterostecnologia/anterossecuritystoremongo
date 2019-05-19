@@ -44,7 +44,7 @@ public class ResourceRepositoryImpl extends MongoSimpleRepository<Resource, Long
 	@Override
 	public Resource getResourceByName(ISystem system, String resourceName) {
 		MongoQuery query = MongoQuery
-				.of(MongoCriteria.where(Resource.NAME).is(resourceName).and("system.$id").is(system.getId()));
+				.of(MongoCriteria.where(Resource.NAME).is(resourceName).and("system.$id").is(system.getSystemId()));
 		List<Resource> result = this.find(query);
 		if (result.size() > 0) {
 			return result.get(0);

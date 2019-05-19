@@ -66,7 +66,7 @@ public class ActionRepositoryImpl extends MongoSimpleRepository<Action, Long> im
 	public void removeActionByAllUsers(IAction act) {
 		try {
 			this.getSession().getTransaction().begin();
-			MongoQuery query = MongoQuery.of(MongoCriteria.where("actions._id").is(act.getId()));
+			MongoQuery query = MongoQuery.of(MongoCriteria.where("actions._id").is(act.getActionId()));
 			Iterable<Security> result = securityRepositoryNoSql.find(query);
 			for (Security s : result) {
 				s.getActions().clear();

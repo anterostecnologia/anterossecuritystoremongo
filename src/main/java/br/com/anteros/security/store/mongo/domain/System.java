@@ -53,7 +53,7 @@ public class System implements Serializable, ISystem {
 	 * Identificação do Sistema
 	 */
 	@Id
-	private String id;
+	private String systemId;
 
 	/*
 	 * Nome do Sistema
@@ -89,12 +89,12 @@ public class System implements Serializable, ISystem {
 	}
 
 
-	public String getId() {
-		return id;
+	public String getSystemId() {
+		return systemId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setSystemId(String id) {
+		this.systemId = id;
 	}
 
 	public String getName() {
@@ -180,5 +180,6 @@ public class System implements Serializable, ISystem {
 	public static System of(String systemName, String description) {
 		return new System(systemName,description);
 	}
+
 
 }
