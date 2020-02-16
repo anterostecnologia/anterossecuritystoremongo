@@ -502,5 +502,11 @@ public class MongoSecurityDataStore implements SecurityDataStore {
 		
 	}
 
+	@Override
+	public void clearCurrentSession() throws Exception {
+		
+		
+	}
+
 
 }
