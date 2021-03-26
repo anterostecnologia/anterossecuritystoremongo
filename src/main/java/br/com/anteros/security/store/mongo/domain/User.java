@@ -101,7 +101,7 @@ public class User extends Security implements IUser {
 	private Boolean boAdministrator;
 	
 	@Property(value="avatar")
-	private String avatar;
+	private byte[] avatar;
 
 	/*
 	 * Horário de acesso do usuário
@@ -286,11 +286,11 @@ public class User extends Security implements IUser {
 		return (IProfile) profile;
 	}
 
-	public String getAvatar() {
+	public byte[] getAvatar() {
 		return avatar;
 	}
 
-	public void setAvatar(String avatar) {
+	public void setAvatar(byte[] avatar) {
 		this.avatar = avatar;
 	}
 
